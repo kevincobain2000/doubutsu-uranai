@@ -17,7 +17,7 @@ curl -sL https://raw.githubusercontent.com/kevincobain2000/doubutsu-uranai/maste
 # Usage
 
 ```sh
-doubutsu-uranai
+./doubutsu-uranai
 
 Enter your gender (M/F): M
 Enter your date of birth (YYYY-MM-DD): 1982-02-02
