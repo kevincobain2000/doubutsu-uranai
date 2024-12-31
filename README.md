@@ -45,6 +45,9 @@ go test ./...
 Since the gold data is proprietary, it is not included in the repository.
 
 ```sh
-git tag v1.0.0
-./build.sh # manually upload to Github releases
+git tag v1.0.x
+git push origin v1.0.x
+./build.sh
+
+Github > releases > create new release > choose tag > upload binary
 ```

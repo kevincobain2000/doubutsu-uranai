@@ -7,8 +7,7 @@ VERSION=$(git describe --tags --abbrev=0)
 OUTPUT_DIR="dist"
 
 # List of target platforms and architectures
-TARGETS="
-darwin amd64
+TARGETS="darwin amd64
 darwin arm64
 freebsd amd64
 linux amd64
