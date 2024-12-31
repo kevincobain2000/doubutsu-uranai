@@ -81,18 +81,26 @@ func main() {
 
 	// Validate date of birth
 	var dob string
+	// Compile the regular expression
 	dateRegex := `^\d{4}-\d{2}-\d{2}$`
+	re, err := regexp.Compile(dateRegex)
+	if err != nil {
+		fmt.Println("Error compiling regular expression:", err)
+		return
+	}
+
+	// Start reading user input
 	for {
-		fmt.Print(softCyan("Enter your date of birth (YYYY-MM-DD): "))
+		fmt.Print("Enter your date of birth (YYYY-MM-DD): ")
 		input, _ := reader.ReadString('\n')
 		input = strings.TrimSpace(input)
 
-		matched, _ := regexp.MatchString(dateRegex, input)
-		if matched {
+		// Use the compiled regular expression to match the input
+		if re.MatchString(input) {
 			dob = input
 			break
 		}
-		fmt.Println(softRed("Invalid date format. Please enter the date in YYYY-MM-DD format."))
+		fmt.Println("Invalid date format. Please enter the date in YYYY-MM-DD format.")
 	}
 
 	// Parse the CSV data
@@ -120,7 +128,7 @@ func main() {
 		animalEN := animalDescriptions[animalJP]
 
 		fmt.Println(softGreen(fmt.Sprintf("Your %s(%s): %s(%s)", categoryJP, categoryEN, animalJP, animalsEn[animalJP])))
-		fmt.Println(softYellow(fmt.Sprint("Description")), fmt.Sprint(animalEN))
+		fmt.Println(softYellow("Description"), fmt.Sprint(animalEN))
 		fmt.Println()
 	}
 }
