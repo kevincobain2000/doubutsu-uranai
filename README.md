@@ -1,7 +1,8 @@
-# doubutsu-uranai
+# `doubutsu-uranai`
 
-The most accurate animal fortune-telling, your personality checker based on your date of birth.
-Don't believe, me? Try it out!
+The most accurate animal fortune-telling, **your personality checke**r based statistics, just by your gender and date of birth.
+
+**Don't believe, me? Try it out!**
 
 https://ja.wikipedia.org/wiki/動物占い
 
@@ -10,6 +11,7 @@ From 1800 to 2024
 # Install
 
 ```sh
+curl -sL https://raw.githubusercontent.com/kevincobain2000/doubutsu-uranai/master/install.sh | sh
 ```
 
 # Usage
