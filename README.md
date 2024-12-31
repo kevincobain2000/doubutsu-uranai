@@ -1,6 +1,8 @@
 # `doubutsu-uranai`
 
-The most accurate animal fortune-telling, **your personality checke**r based statistics, just by your gender and date of birth.
+The most accurate animal fortune-telling on this fucking planet, **your personality checker** based on statistics.
+
+Predicts only by your gender and date of birth.
 
 **Don't believe, me? Try it out!**
 
