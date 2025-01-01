@@ -10,6 +10,7 @@ import (
 	"strings"
 
 	"github.com/fatih/color"
+	"github.com/kevincobain2000/doubutsu-uranai/pkg"
 )
 
 //go:embed gold.csv
@@ -110,7 +111,7 @@ func main() {
 		animalJP := parts[1]
 
 		categoryEN := categoryTranslations[categoryJP]
-		animalEN := AnimalDescriptions[animalJP]
+		animalEN := pkg.AnimalDescriptions[animalJP]
 
 		fmt.Println(softGreen(fmt.Sprintf("Your %s(%s): %s(%s)", categoryJP, categoryEN, animalJP, animalsEn[animalJP])))
 		fmt.Println(softYellow("Description"))

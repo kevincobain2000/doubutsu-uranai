@@ -6,7 +6,10 @@ APP_NAME="doubutsu-uranai"
 VERSION=$(git describe --tags --abbrev=0)
 OUTPUT_DIR="dist"
 
-rm -rf "$OUTPUT_DIR"
+# Remove output directory if it exists
+if [ -d "$OUTPUT_DIR" ]; then
+    rm -rf "$OUTPUT_DIR"
+fi
 
 # List of target platforms and architectures
 TARGETS="darwin amd64
