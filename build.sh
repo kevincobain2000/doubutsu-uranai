@@ -22,6 +22,8 @@ mkdir -p "$OUTPUT_DIR"
 
 echo "Building binaries for $APP_NAME version $VERSION..."
 
+go install mvdan.cc/garble@latest
+
 # Loop through each target
 echo "$TARGETS" | while read -r PLATFORM ARCH; do
     # Skip empty lines
@@ -32,7 +34,7 @@ echo "$TARGETS" | while read -r PLATFORM ARCH; do
     OUTPUT_FILE="$OUTPUT_DIR/${APP_NAME}-${PLATFORM}-${ARCH}"
 
     # Set environment variables and build
-    if ! GOOS=$PLATFORM GOARCH=$ARCH go build -o "$OUTPUT_FILE"; then
+    if ! GOOS=$PLATFORM GOARCH=$ARCH garble build -o "$OUTPUT_FILE"; then
         echo "Failed to build for $PLATFORM $ARCH"
         exit 1
     fi
